@@ -1,0 +1,258 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+}
+
+.pantalla {
+  display: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pantalla.activa {
+  display: block;
+}
+
+.carta {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(#fff0f5, #ffe4e1);
+  margin: 20vh auto;
+  border: 2px solid #e75480;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 60px;
+  box-shadow: 0 0 15px pink;
+  cursor: pointer;
+  position: relative;
+}
+
+.carta h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #c71585;
+}
+
+.sobre {
+  width: 100%;
+  height: 50px;
+  background-color: #c71585;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+.clic-aqui {
+  color: #c71585;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+.cielo-estrellado {
+  background: radial-gradient(ellipse at bottom, #020111 0%, #000000 100%);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.luna {
+  width: 100px;
+  height: 100px;
+  background: #f0f8ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  box-shadow: 0 0 50px white;
+}
+
+.constelaciones::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 
+    20vw 20vh white,
+    25vw 22vh white,
+    23vw 24vh white,
+    70vw 30vh white,
+    72vw 32vh white,
+    71vw 34vh white;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.campo-tulipanes {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, #3e8e41, #6fcf97);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.campo-tulipanes::before {
+  content: '';
+  position: absolute;
+  background: url('https://i.ibb.co/fq9VbWY/tulipan.png') no-repeat center;
+  background-size: 60px;
+  width: 60px;
+  height: 90px;
+  transform: scale(0);
+  animation: crecer 3s forwards;
+}
+
+.campo-tulipanes::after {
+  content: '';
+  position: absolute;
+  background: url('https://i.ibb.co/fq9VbWY/tulipan.png') no-repeat center;
+  background-size: 60px;
+  width: 60px;
+  height: 90px;
+  left: 100px;
+  transform: scale(0);
+  animation: crecer 3s forwards 0.5s;
+}
+
+@keyframes crecer {
+  from { transform: scale(0); }
+  to { transform: scale(3); }
+}
+
+.poema {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  max-width: 80%;
+  font-size: 1.2rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+}
+
+button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: #e75480;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #e75480;
+}
+
+.cielo-amanecer {
+  background: linear-gradient(#fbc2eb, #a6c1ee);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sol {
+  width: 120px;
+  height: 120px;
+  background: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  box-shadow: 0 0 40px gold;
+  animation: brillar 2s infinite alternate;
+}
+
+@keyframes brillar {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 40px gold; }
+}
+
+.nubes {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('https://i.ibb.co/zPX9VdH/nube.png') repeat-x;
+  background-size: contain;
+  animation: moverNubes 60s linear infinite;
+}
+
+@keyframes moverNubes {
+  0% { background-position: 0 0; }
+  100% { background-position: 10000px 0; }
+}
+
+.espacio {
+  background: radial-gradient(#1a0023, #000);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.galaxia {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://i.ibb.co/XsGyZL4/galaxy.jpg') no-repeat center;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.universo {
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.estrellas::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    10vw 10vh white,
+    15vw 15vh white,
+    20vw 20vh white,
+    30vw 30vh white,
+    50vw 50vh white,
+    60vw 60vh white,
+    80vw 80vh white,
+    90vw 90vh white;
+  animation: titilar 2s infinite alternate;
+}
+
+@keyframes titilar {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+.poema.galaxia, .poema.universo {
+  top: 40%;
+  left: 10%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px 5px #000;
+}
+
