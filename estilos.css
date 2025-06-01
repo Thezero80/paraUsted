@@ -146,7 +146,7 @@ body {
 
 button {
   position: absolute;
-  bottom: 30px;
+  bottom: 6vh; /* Mucho más arriba */
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 24px;
@@ -157,6 +157,15 @@ button {
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 0 10px #e75480;
+  z-index: 100;
+}
+
+@media (max-width: 600px) {
+  button {
+    bottom: 12vh; /* Más arriba aún en móviles */
+    padding: 10px 18px;
+    font-size: 0.95rem;
+  }
 }
 
 .cielo-amanecer {
