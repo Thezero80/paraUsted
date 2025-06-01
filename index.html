@@ -27,24 +27,37 @@
     overflow: hidden;
   }
   button.continuar {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ff80aa;
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    border-radius: 30px;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 0 15px #ff80aa;
-    transition: background-color 0.3s ease;
-    z-index: 30;
+  position: absolute;
+  bottom: 6vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff80aa;
+  border: none;
+  padding: 3vw 7vw;
+  font-size: clamp(1em, 2.5vw, 1.3em);
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff80aa;
+  transition: background-color 0.3s ease;
+  z-index: 30;
+  min-width: 120px;
+  max-width: 90vw;
+  display: none; /* Se mostrará por JS */
+}
+
+button.continuar:hover {
+  background: #ff5c8d;
+}
+
+/* Responsive: en pantallas muy pequeñas, ajusta el padding y tamaño */
+@media (max-width: 600px) {
+  button.continuar {
+    padding: 4vw 10vw;
+    font-size: 1em;
+    bottom: 3vh;
   }
-  button.continuar:hover {
-    background: #ff5c8d;
-  }
+}
 
   /* Carta sellada */
   #carta {
@@ -173,7 +186,7 @@
     top: 12vh;
     left: 5vw;
     width: 40vw;
-    font-size: 1.2em;
+    font-size: 1.0em;
     line-height: 1.4em;
     font-style: italic;
     user-select: none;
@@ -241,7 +254,7 @@
     top: 10vh;
     left: 10vw;
     width: 40vw;
-    font-size: 1.3em;
+    font-size: 1.0em;
     font-style: italic;
     color: #5a3e00;
     user-select: none;
